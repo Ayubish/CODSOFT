@@ -13,7 +13,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: 300ms;
     overflow-x: hidden;
     font-family: 'poppins',sans-serif;
 }
@@ -39,6 +38,7 @@ header {
 .menu {
     display: flex;
     gap: 30px;
+    transition: 300ms ease;
 }
 .contact-btn {
     background: #0c5df5;
@@ -69,6 +69,9 @@ header ul {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+.fa-bars {
+    display: none;
 }
 a {
     text-decoration: none;
@@ -244,13 +247,17 @@ footer {
 }
 .copyright {
     text-align: center;
+    padding-top: 50px;
 }
-@media (max-width: 600px) {
-    .menu {
+@media (max-width: 800px) {
+    .mobile-menu {
         display: none;
     }
     .menu ul, .menu {
         flex-direction: column;
+    }
+    .fa-bars {
+        display: block;
     }
     #home {
         flex-direction: column;
@@ -279,5 +286,8 @@ footer {
     .contact-right {
         width: 100%;
         padding-top: 50px;
+    }
+    .foot1 {
+        display: none;
     }
 }
